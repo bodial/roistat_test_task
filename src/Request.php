@@ -81,4 +81,20 @@ class Request
         $this->customFieldsValuesCollection->add($customField);
     }
 
+    //для демонстрации изменений
+    public function showAllLeads()
+    {
+        echo '<pre>';
+        print_r($this->apiClient->leads()->get()->toArray());
+        echo '</pre>';
+    }
+
+    //для демонстрации изменений
+    public function showAllContacts()
+    {
+        echo '<pre>';
+        print_r($this->apiClient->contacts()->get()->toArray());
+        echo '</pre>';
+    }
+
 }
